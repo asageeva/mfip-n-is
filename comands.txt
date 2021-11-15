@@ -1,0 +1,16 @@
+REPORT
+---
+
+DOCX:
+pandoc GonzalezLuisReport.md -F pandoc-crossref --number-sections --citeproc -o GonzalezLuisReport.docx
+pandoc GonzalezLuisReport.md -F pandoc-crossref --pdf-engine=xelatex --pdf-engine-opt=--shell-escape --citeproc --number-sections -o GonzalezLuisReport.pdf
+
+
+PRESENTATION
+---
+
+PDF 1:
+pandoc GonzalezLuisPresentation.md -F pandoc-crossref --pdf-engine=lualatex --number-sections -t beamer --slide-level=2 -o GonzalezLuisPresentation.pdf
+
+PDF 2:
+-unoconv "$<" "$@"
