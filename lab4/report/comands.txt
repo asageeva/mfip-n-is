@@ -1,0 +1,3 @@
+pandoc L04_Ageeva_report.md -F pandoc-crossref --number-sections --citeproc -o L04_Ageeva_report.docx
+pandoc L04_Ageeva_report.md -F pandoc-crossref --pdf-engine=xelatex --pdf-engine-opt=--shell-escape --citeproc --number-sections -o L04_Ageeva_report.pdf
+pandoc L04_Ageeva_presentation.md -F pandoc-crossref --pdf-engine=lualatex --number-sections -t beamer --slide-level=2 -o L04_Ageeva_presentation.pdf
